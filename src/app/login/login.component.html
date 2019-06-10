@@ -1,0 +1,47 @@
+<style>
+  .principal{
+    width: 100vw;
+    height: 100vh;
+    background: dimgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .segundo{
+    width: 300px;
+    height: 300px;
+    background : white
+  }
+  .imagem{
+    display: table-cell;
+    vertical-align: middle;
+    width: 300px;
+    height: 300px;
+  }
+  .texto{
+    text-align: center;
+  }
+</style>
+
+<p-card>
+  <div class="principal">
+     <div>
+      <img class="imagem" src="assets/images/saudeScreen.png" alt="deu erro">
+    </div>
+    <div class="segundo">
+      <div>
+        <h2 class="texto">Login</h2>
+      </div>
+
+      <input type="nome" placeholder="Nome Usuario" pInputText [(ngModel)]="nome"/>
+      <br><br>
+      <input type="senha" placeholder="Senha Usuario" pInputText [(ngModel)]="senha"/>
+      <br><br>
+      <p-button type="button" label="Login" (click)="login()"></p-button>
+      <h5 style="color: cornflowerblue">se ainda não é cadastrado</h5>
+      <p-button type="button" label="Cadastra-se" routerLink="/cadastro"></p-button>
+
+    </div>
+  </div>
+</p-card>

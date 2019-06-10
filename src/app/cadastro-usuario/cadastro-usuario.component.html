@@ -1,0 +1,53 @@
+<style>
+    .primeira{
+      width: 100vw;
+      height: 100vh;
+      background: dimgray;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .preenchimento{
+      width: 60px;
+      height: 410px;
+      background : white;
+    }
+    .segunda{
+      width: 300px;
+      height: 410px;
+      background : white;
+    }
+    .imagem{
+      width: 100px;
+      height: 100px;
+    }
+    .texto{
+      color: black;
+    }
+  </style>
+  <p-card>
+      <img class="imagem" src="assets/images/saudeScreen.png" alt="deu erro">
+      <div class="primeira">
+        <div class="preenchimento"></div>
+        <div class="segunda">
+          <div>
+            <h2 class="texto">Cadastro</h2>
+          </div>
+          <input style="background:lightgreen" type="nome" placeholder="Nome Usuario" pInputText [(ngModel)]="usuario.nome"/>
+          <br><br>
+          <input style="background:lightgreen" type="senha" placeholder="Senha Usuario" pInputText [(ngModel)]="usuario.senha"/>
+          <br><br>
+          <input style="background:lightgreen" type="peso" placeholder="Seu Peso" pInputText [(ngModel)]="usuario.peso"/>
+          <br><br>
+          <input style="background:lightgreen" type="altura" placeholder="Sua Altura" pInputText [(ngModel)]="usuario.altura"/>
+          <br><br>
+          <input style="background:lightgreen" type="objetivo" placeholder="Seu objetivo" pInputText [(ngModel)]="usuario.obejetivo"/>
+          <br><br>
+          <input style="background:lightgreen" type="adm" placeholder="Adm ?" pInputText [(ngModel)]="usuario.adm"/>
+          <br><br>
+          <p-button type="button" label="Cadastrar" (click)="cadastro()"></p-button>
+          <br><br><br>
+        </div>
+      </div>
+  </p-card>
