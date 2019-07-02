@@ -5,7 +5,7 @@ export class Usuario{
     altura: number;
     objetivo: string;
     id: string;
-    adm: boolean;
+    adm: string;
 
     constructor(nome, senha, peso, altura, objetivo, id, adm){
         this.nome = nome;
@@ -22,7 +22,7 @@ export class Usuario{
             id:"", adm : this.adm}
     }
     validar(){
-        if(this.nome==undefined || this.senha==undefined || this.peso || this.altura==undefined ||
+        if(this.nome==undefined || this.senha==undefined || this.peso== undefined || this.altura==undefined ||
             this.objetivo==undefined || this.adm==undefined){
                 return false;
         }else{

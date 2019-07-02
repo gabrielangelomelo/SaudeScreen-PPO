@@ -17,6 +17,7 @@ import { UsuarioService } from './usuario.service';
 import { MenuAdmComponent } from './menu-adm/menu-adm.component';
 import { CardapioComponent } from './cardapio/cardapio.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import {DropdownModule} from 'primeng/dropdown';
 
 
 export const rotas:Routes = [
@@ -44,6 +45,7 @@ export const rotas:Routes = [
     ButtonModule,
     CardModule,
     AngularFireModule.initializeApp(environment.firebase),
+    DropdownModule
   ],
   providers: [UsuarioService, AngularFirestore],
   bootstrap: [AppComponent]

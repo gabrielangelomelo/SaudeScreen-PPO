@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       let auxGet = this.usuarioService.login(this.nome,this.senha);
       auxGet.subscribe(resultado =>{
         if(resultado.length != 0){
-          if(resultado[0].adm==true){
+          if(resultado[0].adm=="true"){
             this.router.navigate(['menu-adm']);
           }else{
             this.router.navigate(['cardapio']);
